@@ -1,7 +1,15 @@
 python 1.12
+
+
 only linux
+
+
 #memhash
+
+
 memhash miner
+
+--------------
 
 installation:
 
