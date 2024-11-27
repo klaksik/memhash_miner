@@ -1,53 +1,81 @@
-python 1.12
 
+# Memhash Miner — Python Miner for Linux
 
-only linux
+**Memhash Miner** is a lightweight and easy-to-use mining solution written in Python, designed specifically for Linux. With simple setup and minimal dependencies, it is an ideal choice for both beginners and experienced users.
 
+---
 
-#memhash
+## Features
+- Fully optimized for Linux.
+- Quick and straightforward installation.
+- Easy configuration through a single file.
+- Seamless integration with popular hosting platforms.
 
+---
 
-memhash miner
+## Installation and Setup
 
---------------
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone https://github.com/your_repository/memhash.git
+   cd memhash
+   pip3 install -r requirements.txt
+   ```
 
-installation:
+2. Configure the URL:
+   - Open the web.telegram.org website, and open memhash.
+     
+     ![image](https://github.com/user-attachments/assets/ead90574-dcef-49db-8a36-faae099812d6)
+     
+     ![image](https://github.com/user-attachments/assets/b66d7683-f1a3-4425-92f5-7fdbc1a63ee6)
+   - Press `F12` to open Developer Tools.
+   - Navigate to the **Elements** tab.
+     
+     ![image](https://github.com/user-attachments/assets/34f8ea10-4f18-4ab7-bd41-89e3c5e3845b)
+   - Select the element picker tool and click on the **Memhash** window.
+     
+     ![image](https://github.com/user-attachments/assets/aaa12d6d-2efc-4318-b17e-6b2c9f472671)
+     
+     ![image](https://github.com/user-attachments/assets/cd84aaff-95b9-4145-9cf5-e56ff9389a52)
+     
+     ![image](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
+   - Copy the URL of the selected element and paste it into `main.py`:
 
-pip3 install -r requirements.txt
+3. Run the miner:
+   ```bash
+   python3 main.py
+   ```
 
-set url in config:
+---
 
-go to
+## Recommended Hosting
 
-![image](https://github.com/user-attachments/assets/ead90574-dcef-49db-8a36-faae099812d6)
+We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosting platform for your mining tasks.
 
-press open
+---
 
-![image](https://github.com/user-attachments/assets/b66d7683-f1a3-4425-92f5-7fdbc1a63ee6)
+## Screenshots
 
-press F12
+### Selecting the Memhash Window
+![Selecting the Memhash Window](https://github.com/user-attachments/assets/aaa12d6d-2efc-4318-b17e-6b2c9f472671)
 
-press elements
+### Configuration Example
+![Configuration Example](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
 
-![image](https://github.com/user-attachments/assets/34f8ea10-4f18-4ab7-bd41-89e3c5e3845b)
+---
 
-press select
+## License
 
-![image](https://github.com/user-attachments/assets/aaa12d6d-2efc-4318-b17e-6b2c9f472671)
+This project is distributed under the **MIT License**. Feel free to use, modify, and share.
 
-press on window memhash
+---
 
-![image](https://github.com/user-attachments/assets/cd84aaff-95b9-4145-9cf5-e56ff9389a52)
+## Contact
 
-copy this link to main.py
+For inquiries and suggestions:
+- Email: your_email@example.com
+- Telegram: [@your_telegram](https://t.me/your_telegram)
 
-![image](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
+---
 
-
-python3 main.py
-
---------------
-
-hosting:
-
-[https://aeza.net/](https://aeza.net/?ref=522069)
+Thank you for using Memhash Miner!
