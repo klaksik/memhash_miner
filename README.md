@@ -73,8 +73,7 @@ This project is distributed under the **MIT License**. Feel free to use, modify,
 ## Contact
 
 For inquiries and suggestions:
-- Email: your_email@example.com
-- Telegram: [@your_telegram](https://t.me/your_telegram)
+- Telegram: [@Klaksiks](https://t.me/Klaksiks)
 
 ---
 
