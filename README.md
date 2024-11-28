@@ -1,5 +1,5 @@
 
-# Memhash Miner — Python Miner for Linux
+# Memhash Miner — Python Miner for Linux or Windows
 
 **Memhash Miner** is a lightweight and easy-to-use mining solution written in Python, designed specifically for Linux. With simple setup and minimal dependencies, it is an ideal choice for both beginners and experienced users.
 
@@ -14,6 +14,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
 ## Features
 - Fully optimized for Linux.
+- Fully optimized for Windows.
 - Quick and straightforward installation.
 - Easy configuration through a single file.
 - Seamless integration with popular hosting platforms.
