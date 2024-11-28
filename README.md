@@ -3,6 +3,13 @@
 
 **Memhash Miner** is a lightweight and easy-to-use mining solution written in Python, designed specifically for Linux. With simple setup and minimal dependencies, it is an ideal choice for both beginners and experienced users.
 
+
+---
+
+## Recommended Hosting
+
+We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosting platform for your mining tasks.
+
 ---
 
 ## Features
@@ -14,15 +21,38 @@
 ---
 
 ## Installation and Setup
+1.
+   install python3.10
+  Ubuntu:
+  ```bash
+   sudo apt update
+   sudo apt install -y software-properties-common
+   sudo add-apt-repository -y ppa:deadsnakes/ppa
+   sudo apt update
+   sudo apt install -y python3.10 python3.10-venv python3.10-distutils
+   apt install python3-pip
+  ``` 
+2.
+   install Chrome
+  Ubuntu:
+  ```bash
+  # Установить зависимости
+   sudo apt-get install -y libxss1 libappindicator1 libindicator7
 
-1. Clone the repository and install dependencies:
+   # Скачиваем Google Chrome
+   wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.85-1_amd64.deb
+   sudo apt install ./google-chrome-stable_131.0.6778.85-1_amd64.deb
+
+   sudo apt-get install -f
+  ```
+4. Clone the repository and install dependencies:
    ```bash
-   git clone https://github.com/your_repository/memhash.git
-   cd memhash
+   git clone https://github.com/klaksik/memhash_miner.git
+   cd memhash_miner
    pip3 install -r requirements.txt
    ```
 
-2. Configure the URL:
+5. Configure the URL:
    - Open the web.telegram.org website, and open memhash.
      
      ![image](https://github.com/user-attachments/assets/ead90574-dcef-49db-8a36-faae099812d6)
@@ -41,18 +71,15 @@
      ![image](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
    - Copy the URL of the selected element and paste it into `main.py`:
 
-3. Run the miner:
+6. Configure the Telegram bot:
+   - go to https://t.me/BotFather
+   - create bot and paste token into script
+   
+7. Run the miner:
    ```bash
    python3 main.py
    ```
 
----
-
-## Recommended Hosting
-
-We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosting platform for your mining tasks.
-
----
 
 ## Screenshots
 
