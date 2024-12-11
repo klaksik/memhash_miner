@@ -32,7 +32,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
       on linux:
       ```bash
-       chmod +x miner_linux
+       chmod 777 miner_linux
        ./miner_linux
       ```
       on windows:
@@ -66,7 +66,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
       on linux:
       ```bash
-       chmod +x miner_linux
+       chmod 777 miner_linux
        ./miner_linux
       ```
       on windows:
