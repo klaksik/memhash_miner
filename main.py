@@ -1,38 +1,80 @@
+
 import time
 import asyncio
 from datetime import datetime, timedelta, timezone
+import chromedriver_autoinstaller
+from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
+from aiogram.filters import Command
+from aiogram.types import Message
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 from aiogram import Bot, Dispatcher, types
+import os
+import json
 
-# подвязка к телеграм боту для отслеживания работы
-TOKEN = ""
+# Путь к конфигурационному файлу
+CONFIG_FILE = "config.json"
 
-# ссылка на приложение
-url = ""
+# Значения по умолчанию для конфигурации
+DEFAULT_CONFIG = {
+    "TOKEN": "",  # Токен Telegram бота
+    "url": "",  # Ссылка на приложение
+    "times": True,  # Работа по графику
+    "click_times": [  # Список времени для графика
+        "2:00:00", "3:00:00", "5:00:00", "6:30:00",
+        "13:30:00", "14:30:00", "18:00:00", "20:00:00"
+    ],
+    "screenshot_path": "screenshot.png"  # Путь для сохранения скриншота
+}
 
-# работа по графику
-times = True
+# Функция для загрузки или создания конфигурационного файла
+def load_or_create_config():
+    if os.path.exists(CONFIG_FILE):
+        # Если файл существует, загрузить значения
+        with open(CONFIG_FILE, "r", encoding="utf-8") as file:
+            config = json.load(file)
+            print("Конфигурация загружена.")
+    else:
+        # Если файла нет, создать его с значениями по умолчанию
+        with open(CONFIG_FILE, "w", encoding="utf-8") as file:
+            json.dump(DEFAULT_CONFIG, file, indent=4, ensure_ascii=False)
+            print("Создан новый конфигурационный файл с настройками по умолчанию, заполните его")
 
-# Список времени для графика (в формате HH:MM:SS, МСК) (обязательно парное количество и в возрастающем списке по времени суток, 1 значение - 1 клик на кнопку)
-click_times = ["2:00:00", "3:00:00", "5:00:00", "6:30:00", "13:30:00", "14:30:00", "18:00:00", "20:00:00"]
+        config = DEFAULT_CONFIG
 
-# Настройка Telegram бота
-bot = Bot(token=TOKEN)
-dp = Dispatcher(bot)
+    return config
 
-screenshot_path = "screenshot.png"
+# Загрузка конфигурации
+config = load_or_create_config()
+
+# Использование значений конфигурации
+TOKEN = config["TOKEN"]
+url = config["url"]
+times = config["times"]
+click_times = config["click_times"]
+screenshot_path = config["screenshot_path"]
+
+if config == DEFAULT_CONFIG:
+    exit()
+
+
+
+dp = Dispatcher()
+
 options = Options()
 options.add_argument("--window-size=1920,1080")
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+chromedriver_autoinstaller.install()  # Check if the current version of chromedriver exists
+
+
+driver = webdriver.Chrome(options=options)
 driver.get(url)
 
 
@@ -109,13 +151,14 @@ def is_between_times(click_times):
             click_button()
             break
 
-@dp.message_handler(commands=['screen'])
-async def send_screenshot(message: types.Message):
-    """Отправляет скриншот в ответ на команду /screen."""
-    capture_screenshot()
+@dp.message(Command(commands=['screen']))
+async def send_screenshot(message: Message):
+    """Обрабатывает команду /screen и отправляет скриншот."""
     await message.answer("Создаю скриншот, подождите...")
-    await message.answer_document(open(screenshot_path, 'rb'))
-
+    # Создаем скриншот
+    capture_screenshot()
+    # Отправляем файл
+    await message.answer_document(types.FSInputFile(screenshot_path))
 async def main():
     """Главная асинхронная функция для запуска бота и кликов."""
     if times:
@@ -123,7 +166,8 @@ async def main():
     else:
         click_button()
     print("Бот запущен...")
-    await dp.start_polling()
+    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    await dp.start_polling(bot)
 
 if __name__ == "__main__":
     asyncio.run(main())  # Запуск главного цикла событий
