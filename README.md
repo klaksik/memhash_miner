@@ -26,15 +26,17 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 1. Download last version for your OS in [Releases](https://github.com/klaksik/memhash_miner/releases/tag/v1.0.0) :
 
 2. Start applicaton:
+
       on linux:
       ```bash
        chmod +x miner_linux
        ./miner_linux
       ```
       on windows:
-         Just open app
+   
+       Just open app
 
-3. Configure the URL:
+4. Configure the URL:
    - Open the web.telegram.org website, and open memhash.
      
      ![image](https://github.com/user-attachments/assets/ead90574-dcef-49db-8a36-faae099812d6)
@@ -53,19 +55,20 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
      ![image](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
    - Copy the URL of the selected element and paste it into `config.json`:
 
-4. Configure the Telegram bot:
+5. Configure the Telegram bot:
    - go to https://t.me/BotFather
    - create bot and paste token into `config.json`
    
-5. Start applicaton:
+6. Start applicaton:
+
       on linux:
       ```bash
        chmod +x miner_linux
        ./miner_linux
       ```
       on windows:
-         Just open app
-
+   
+       Just open app
 ---
 
 ## BOT command
