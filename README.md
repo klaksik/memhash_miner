@@ -27,10 +27,10 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
 2. Start applicaton:
       on linux:
-         ```bash
-         chmod +x miner_linux
-         ./miner_linux
-         ```
+      ```bash
+       chmod +x miner_linux
+       ./miner_linux
+      ```
       on windows:
          Just open app
 
@@ -57,14 +57,15 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
    - go to https://t.me/BotFather
    - create bot and paste token into `config.json`
    
-7. Start applicaton:
+5. Start applicaton:
       on linux:
-         ```bash
-         chmod +x miner_linux
-         ./miner_linux
-         ```
+      ```bash
+       chmod +x miner_linux
+       ./miner_linux
+      ```
       on windows:
          Just open app
+
 
 
 ---
