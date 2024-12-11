@@ -66,7 +66,11 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
       on windows:
          Just open app
 
+---
 
+## BOT command
+
+/screen - for get screen memhash
 
 ---
 
