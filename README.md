@@ -22,6 +22,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 ---
 
 ## Installation and Setup
+
 1.
    install python3.10
   Ubuntu:
@@ -80,7 +81,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
    ```bash
    python3 main.py
    ```
-
+## OR I can install it for you, for $15
 
 ## Screenshots
 
