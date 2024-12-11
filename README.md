@@ -12,6 +12,9 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
 ---
 
+## [Donate](https://donatello.to/Klaksik)
+
+---
 ## Features
 - Fully optimized for Linux.
 - Fully optimized for Windows.
