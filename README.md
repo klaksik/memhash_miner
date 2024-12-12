@@ -26,39 +26,25 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
 ## Installation and Setup
 
-1. Download last version for your OS in [Releases](https://github.com/klaksik/memhash_miner/releases/tag/v1.0.0) :
 
-2. Start applicaton:
+1. Start applicaton:
 
       on linux:
-
-       1. install python3.12:
-         ```bash
-          sudo apt update
-          sudo apt install -y software-properties-common
-          sudo add-apt-repository -y ppa:deadsnakes/ppa
-          sudo apt update
-          sudo apt install -y python3.12
-         ```
-       2. install pip:
-         ```bash
-          sudo apt install -y python3.12-distutils
-          wget https://bootstrap.pypa.io/get-pip.py
-          sudo python3.12 get-pip.py
-         ```
-       3. clone repo:
-         ```bash
-          sudo git clone https://github.com/klaksik/memhash_miner
-          cd memhash_miner
-         ```
-       4.
+       1. download miner:
         ```bash
-         pip install -r requirements.txt
-         python3.12 miner_linux
+          sudo wget https://github.com/klaksik/memhash_miner/releases/download/v1.0.1/memhash_linux
         ```
+       2. set permission:
+         ```bash
+          chmod 777 memhash_linux
+         ```
+       3. start:
+         ```bash
+          ./memhash_linux
+         ```
       on windows:
-   
-       Just open app
+       1. Download last version for your OS in [Releases](https://github.com/klaksik/memhash_miner/releases/tag/v1.0.1) :
+       2. Just open app
 
 4. Configure the URL:
    - Open the web.telegram.org website, and open memhash.
@@ -86,9 +72,14 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 6. Start applicaton:
 
       on linux:
-      ```bash
-       python3.12 miner_linux
-      ```
+         windowed:
+               ```bash
+                ./miner_linux
+               ```
+         daemon:
+               ```bash
+                ./miner_linux &
+               ```
       on windows:
    
        Just open app
