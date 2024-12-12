@@ -27,26 +27,28 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 ## Installation and Setup
 
 
-1. Start applicaton:
+1. **Start application:**
 
-      on linux:
-       1. download miner:
-        ```bash
-          sudo wget https://github.com/klaksik/memhash_miner/releases/download/v1.0.1/memhash_linux
-        ```
-       2. set permission:
-         ```bash
-          chmod 777 memhash_linux
-         ```
-       3. start:
-         ```bash
-          ./memhash_linux
-         ```
-      on windows:
-       1. Download last version for your OS in [Releases](https://github.com/klaksik/memhash_miner/releases/tag/v1.0.1) :
-       2. Just open app
+   **On Linux:**
+   1. Download miner:
+      ```bash
+      sudo wget https://github.com/klaksik/memhash_miner/releases/download/v1.0.1/memhash_linux
+      ```
+   2. Set permissions:
+      ```bash
+      chmod 777 memhash_linux
+      ```
+   3. Start the application:
+      ```bash
+      ./memhash_linux
+      ```
 
-4. Configure the URL:
+   **On Windows:**
+   1. Download the latest version for your OS from [Releases](https://github.com/klaksik/memhash_miner/releases/tag/v1.0.1).
+   2. Just open the application.
+
+
+2. Configure the URL:
    - Open the web.telegram.org website, and open memhash.
      
      ![image](https://github.com/user-attachments/assets/ead90574-dcef-49db-8a36-faae099812d6)
@@ -65,24 +67,25 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
      ![image](https://github.com/user-attachments/assets/8360ce65-bfad-4a65-a1e3-819cbff70da1)
    - Copy the URL of the selected element and paste it into `config.json`:
 
-5. Configure the Telegram bot:
+3. Configure the Telegram bot:
    - go to https://t.me/BotFather
    - create bot and paste token into `config.json`
    
-6. Start applicaton:
+4. Start application:
 
-      on linux:
-         windowed:
-               ```bash
-                ./miner_linux
-               ```
-         daemon:
-               ```bash
-                ./miner_linux &
-               ```
-      on windows:
-   
-       Just open app
+    on linux:
+        windowed:
+            ```bash
+            ./miner_linux
+            ```
+        daemon:
+            ```bash
+            ./miner_linux &
+            ```
+
+    on windows:
+        Just open app
+
 ---
 
 ## BOT command
