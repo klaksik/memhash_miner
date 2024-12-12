@@ -42,7 +42,9 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
          ```
        2. install pip:
          ```bash
-          python3.12 get-pip.py
+          sudo apt install -y python3.12-distutils
+          wget https://bootstrap.pypa.io/get-pip.py
+          sudo python3.12 get-pip.py
          ```
        3. clone repo:
          ```bash
@@ -51,6 +53,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
          ```
        4.
         ```bash
+         pip install -r requirements.txt
          python3.12 miner_linux
         ```
       on windows:
