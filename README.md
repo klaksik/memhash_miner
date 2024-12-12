@@ -31,10 +31,28 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 2. Start applicaton:
 
       on linux:
-      ```bash
-       chmod 777 miner_linux
-       ./miner_linux
-      ```
+
+       1. install python3.12:
+         ```bash
+          sudo apt update
+          sudo apt install -y software-properties-common
+          sudo add-apt-repository -y ppa:deadsnakes/ppa
+          sudo apt update
+          sudo apt install -y python3.12
+         ```
+       2. install pip:
+         ```bash
+          python3.12 get-pip.py
+         ```
+       3. clone repo:
+         ```bash
+          sudo git clone https://github.com/klaksik/memhash_miner
+          cd memhash_miner
+         ```
+       4.
+        ```bash
+         python3.12 miner_linux
+        ```
       on windows:
    
        Just open app
@@ -66,8 +84,7 @@ We recommend using [Aeza.net](https://aeza.net/?ref=522069) — a reliable hosti
 
       on linux:
       ```bash
-       chmod 777 miner_linux
-       ./miner_linux
+       python3.12 miner_linux
       ```
       on windows:
    
